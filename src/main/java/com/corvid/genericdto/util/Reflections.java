@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import org.jboss.logging.Logger.Level;
+
 @SuppressWarnings("rawtypes")
 public class Reflections {
 
@@ -233,12 +235,11 @@ public class Reflections {
     }
 
     public static Field getField(Class clazz, String name) {
-        Class superClass = clazz;
-        for (superClass = superClass.getSuperclass(); superClass != Object.class;) {
+        for (Class superClass = clazz; superClass != Object.class; superClass = superClass.getSuperclass()) {
             try {
                 return superClass.getDeclaredField(name);
             } catch (NoSuchFieldException nsfe) {
-                throw new IllegalArgumentException("no such field: " + clazz.getName() + '.' + name);
+                LoggingUtil.log(Reflections.class, Level.DEBUG, String.format("Field [%s] not found in [%s]. Trying in superclass", name, superClass.getName()));
             }
         }
         throw new IllegalArgumentException("no such field: " + clazz.getName() + '.' + name);
