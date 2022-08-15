@@ -251,7 +251,8 @@ public class Reflections {
      */
     public static List<Field> getAllFields(Class clazz) {
         List<Field> fields = new ArrayList<>();
-        for (Class superClass = clazz; superClass != Object.class; superClass = superClass.getSuperclass()) {
+        Class superClass = clazz;
+        for (; superClass != Object.class; superClass = superClass.getSuperclass()) {
             for (Field field : superClass.getDeclaredFields()) {
                 fields.add(field);
             }
@@ -266,7 +267,7 @@ public class Reflections {
     public static List<Field> getFields(Class clazz, Class<? extends Annotation> annotation) {
         List<Field> fields = new ArrayList<>();
         Class superClass = clazz;
-        for (superClass = superClass.getSuperclass(); superClass != Object.class; ) {
+        for (; superClass != Object.class; superClass = superClass.getSuperclass()) {
             for (Field field : superClass.getDeclaredFields()) {
                 if (field.isAnnotationPresent(annotation)) {
                     fields.add(field);
