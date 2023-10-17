@@ -37,9 +37,10 @@
 
 package com.corvid.genericdto.util;
 
-import javax.ws.rs.core.MediaType;
 import java.io.*;
 import java.nio.charset.Charset;
+
+import jakarta.ws.rs.core.MediaType;
 
 /**
  * A utlity class for reading and writing using byte and character streams.

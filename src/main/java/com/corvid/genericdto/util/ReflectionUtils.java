@@ -8,6 +8,10 @@ import com.corvid.genericdto.shared.time.CalendarDate;
 import com.corvid.genericdto.shared.time.Duration;
 import com.corvid.genericdto.util.mirror.Mirror;
 
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Transient;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.math.BigDecimal;
@@ -26,9 +30,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.logging.Logger;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 
 /**
  * Created with IntelliJ IDEA. User: mokua,kodero Date: 2/27/14 Time: 11:50 AM

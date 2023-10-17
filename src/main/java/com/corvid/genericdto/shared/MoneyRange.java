@@ -4,7 +4,7 @@
 package com.corvid.genericdto.shared;
 
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 /**
  * @author 3:13:10 PM mokua,kodero

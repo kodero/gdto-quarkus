@@ -25,8 +25,8 @@ import java.util.Currency;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.Map;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 
 import org.jboss.logging.Logger.Level;
 

@@ -3,8 +3,8 @@ package com.corvid.genericdto.util.types;
 import com.corvid.genericdto.data.gdto.DateConverter;
 import com.corvid.genericdto.util.Strings;
 
-import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.core.Response;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;

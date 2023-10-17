@@ -3,7 +3,7 @@
  */
 package com.corvid.genericdto.shared;
 
-import javax.persistence.Embeddable;
+import jakarta.persistence.Embeddable;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
